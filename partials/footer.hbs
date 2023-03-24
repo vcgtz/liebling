@@ -26,10 +26,20 @@ This footer template is shared across all the pages.
       </a>
       --}}
     </nav>
+
+    <a href="{{@site.url}}" class="m-footer-logo">
+        <img src="{{@site.logo}}" alt="{{@site.title}}" class="{{#if @custom.dark_mode_logo}}m-logo__image-light{{/if}}">
+        {{#if @custom.dark_mode_logo}}
+          <img src="{{@custom.dark_mode_logo}}" alt="{{@site.title}}" class="m-logo__image-dark">
+        {{/if}}
+    </a>
+
     <p class="m-footer-copyright">
-      <span>{{@site.title}} &copy; {{date format="YYYY"}}</span>
+      <span>{{t "Published with"}} <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> & <a target="_blank" rel="noopener" href="https://www.digitalocean.com/">Digital Ocean</a></span>
       <span>&nbsp; &bull; &nbsp;</span>
-      <span>{{t "Published with"}} <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></span>
+      <span>🇲🇽</span>
+      <span>&nbsp; &bull; &nbsp;</span>
+      <span class="display: block">&copy; {{date format="YYYY"}}</span>
     </p>
     {{!--
     <p class="m-footer-copyright jslicense">

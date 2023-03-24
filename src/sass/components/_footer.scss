@@ -4,7 +4,7 @@
 }
 
 .m-footer__content {
-  color: $white;
+  color: #94A3B8;
   text-align: center;
   padding: 50px $mobile-space;
 
@@ -84,5 +84,31 @@
 .rtl {
   .m-footer-social {
     direction: ltr;
+  }
+}
+
+.m-footer-logo {
+  display: block;
+  height: 24px;
+  margin-bottom: 8px;
+  text-align: center;
+
+  img {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+
+    &.m-logo__image-light {
+      display: var(--toggle-darkmode-button-display-moon);
+    }
+
+    &.m-logo__image-dark {
+      display: var(--toggle-darkmode-button-display-sun);
+    }
+  }
+
+  &.in-mobile-topbar {
+    height: 20px;
+    margin: 0 $mobile-space;
   }
 }

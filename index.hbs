@@ -25,21 +25,23 @@ into the {body} of the default.hbs template --}}
 
 <main class="main-wrap">
   {{!-- Inject styles of the hero image to make it responsive --}}
-  {{!-- {{> hero background=@site.cover_image}}
-  <div class="m-hero__content" data-animate="fade-down">
-    <h1 class="m-hero-title bigger">{{@site.title}}</h1>
-    {{#if @site.description}}
-      <p class="m-hero-description bigger">{{@site.description}}</p>
-    {{/if}}
-    {{#if @custom.use_custom_cta}}
-      <a href="{{@custom.custom_cta_url}}" class="m-button filled">{{@custom.custom_cta_text}}</a>
-    {{else}}
-      {{#if @site.members_enabled}}
-        <a href="{{@site.url}}/newsletter" class="m-button filled js-newsletter">{{t "Subscribe"}}</a>
-      {{/if}}
-    {{/if}}
-  </div>
-  </section> --}}
+  {{#if false}}
+    {{> hero background=@site.cover_image}}
+      <div class="m-hero__content" data-animate="fade-down">
+        <h1 class="m-hero-title bigger">{{@site.title}}</h1>
+        {{#if @site.description}}
+          <p class="m-hero-description bigger">{{@site.description}}</p>
+        {{/if}}
+        {{#if @custom.use_custom_cta}}
+          <a href="{{@custom.custom_cta_url}}" class="m-button filled">{{@custom.custom_cta_text}}</a>
+        {{else}}
+          {{#if @site.members_enabled}}
+            <a href="{{@site.url}}/newsletter" class="m-button filled js-newsletter">{{t "Subscribe"}}</a>
+          {{/if}}
+        {{/if}}
+      </div>
+    </section>
+  {{/if}}
 
   <div class="l-content">
     <div class="l-wrapper" data-animate="fade-up">
